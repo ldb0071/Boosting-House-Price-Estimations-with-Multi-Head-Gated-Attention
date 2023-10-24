@@ -374,14 +374,14 @@ class AttentionSpatialInterpolationModel:
                 ############################################ test ############################################
                 rmse_test = mean_squared_error(np.exp(self.y_test), np.exp(predictions_test_dim))
 
-                mae_log_test = mean_absolute_error(np.exp(self.y_test), np.exp(predictions_test_dim))
+                mae_log_test = mean_absolute_error((self.y_test), (predictions_test_dim))
 
                 mape_test = u.mean_absolute_percentage_error(np.exp(self.y_test), np.exp(predictions_test_dim))
 
                 ############################################ train ############################################
                 rmse_train = mean_squared_error(np.exp(self.y_train), np.exp(predictions_train_dim))
 
-                mae_log_train = mean_absolute_error(np.exp(self.y_test), np.exp(predictions_test_dim))
+                mae_log_train = mean_absolute_error((self.y_test), (predictions_test_dim))
 
                 mape_train = u.mean_absolute_percentage_error(np.exp(self.y_train), np.exp(predictions_train_dim))
                 # rmse_test = mean_squared_error(self.y_test, predictions_test_dim)
@@ -401,14 +401,14 @@ class AttentionSpatialInterpolationModel:
                 ############################################ test ############################################
                 rmse_test = mean_squared_error(self.y_test, predictions_test_dim)
 
-                mae_log_test = mean_absolute_error(self.y_test, predictions_test_dim)
+                mae_log_test = mean_absolute_error(np.log1p(self.y_test), np.log1p(predictions_test_dim))
 
                 mape_test = u.mean_absolute_percentage_error(self.y_test, predictions_test_dim)
 
                 ############################################ train ############################################
                 rmse_train = mean_squared_error(self.y_train, predictions_train_dim)
 
-                mae_log_train = mean_absolute_error(self.y_train, predictions_train_dim)
+                mae_log_train = mean_absolute_error(np.log1p(self.y_test), np.log1p(predictions_test_dim))
 
                 mape_train = u.mean_absolute_percentage_error(self.y_train, predictions_train_dim)
 

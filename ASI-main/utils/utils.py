@@ -36,7 +36,7 @@ def load_model(X: None, y: None, seed: None, test_size: None, model: None):
                                                                                                        predictions)
 def mean_absolute_percentage_error(y_true, y_pred):
     y_true, y_pred = np.array(y_true), np.array(y_pred)
-    return np.median(np.abs((y_true - y_pred) / y_true)) * 100
+    return np.mean(np.abs((y_true - y_pred) / y_true)) * 100
 
 class BatchPreProcessor(object):
 
