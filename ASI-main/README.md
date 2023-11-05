@@ -1,4 +1,4 @@
-# Attention-Based Spatial Interpolation for House Price Prediction 
+#  Boosting House Price Estimations with Multi-Head Gated Attention
 
 This project is an implementation based on the original code found at [darniton/ASI](https://github.com/darniton/ASI) 
 
